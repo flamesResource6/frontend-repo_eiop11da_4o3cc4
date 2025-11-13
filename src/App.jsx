@@ -3,8 +3,11 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Timeline from './components/Timeline'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import CTA from './components/CTA'
+import PrintSheet from './components/PrintSheet'
 
 function App() {
   const [mounted, setMounted] = useState(false)
@@ -18,8 +21,13 @@ function App() {
         <Hero />
         <Skills />
         <Projects />
+        <Timeline />
         <Contact />
         <Footer />
+        {/* Printable one-pager (visible only when printing) */}
+        <PrintSheet />
+        {/* Floating call-to-action */}
+        <CTA />
       </div>
     </div>
   )

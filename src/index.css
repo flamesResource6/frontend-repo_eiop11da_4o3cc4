@@ -15,14 +15,21 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
   }
 
   body {
     @apply antialiased;
   }
+
+  @media print {
+    body * { visibility: hidden; }
+    #print, #print * { visibility: visible; }
+    #print { position: absolute; top: 0; left: 0; right: 0; }
+  }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
+/* Custom utility classes */
 @layer utilities {
   .animate-in {
     animation-name: animateIn;
